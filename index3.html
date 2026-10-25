@@ -1,0 +1,113 @@
+<style>
+  .signup-container{
+    font-family: roboto;
+    background-color: black;
+    border: solid 3px black;
+    box-shadow: 0 0px 20px rgba(255, 255, 255, 0.562);
+    color: white;
+    width: 500px;
+    border-radius: 15px;
+    margin: auto; 
+    transition: transform 0.5s ease;
+    margin-top: 23vh
+  }
+
+  .signup-container:hover{
+    transform: scale(1.01);
+  }
+
+ .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Adds clean spacing between form rows */
+  }
+
+  .form-group label {
+    display: inline-block;
+    width: 130px;        /* Forces all text labels to occupy the exact same width */
+    flex-shrink: 0;      /* Prevents labels from squeezing on small screens */
+  }
+
+  .form-group input {
+    flex-grow: 1;        /* Makes input fields stretch uniformly */
+    max-width: 300px;    /* Optional: prevents inputs from becoming too wide */
+    background-color: black; 
+    color: white; 
+    border: 2px solid rgba(255, 255, 255, 0.388); 
+    border-radius: 5px;
+    padding: 4px 8px;    /* Makes inputs easier to type in */
+  }
+  
+  .btn-submit{
+    background-color: black;
+    border: solid 2px rgba(255, 255, 255, 0.388);
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+    transition: background-color 0.5s ease
+  }
+      .btn-submit2{
+    background-color: black;
+    border: solid 2px rgba(255, 255, 255, 0.388);
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+    width: 70px;
+    transition: background-color 0.5s ease
+  }
+  
+  .btn-submit2:hover{
+    background-color: rgba(255, 255, 255, 0.126);
+  }
+
+  .btn-submit:hover{
+    background-color: rgba(255, 255, 255, 0.126);
+  }
+
+  .signup-footer a{
+    color: rgba(255, 255, 255, 0.627);
+    transition: color 0.3s ease;
+  }
+
+  .signup-footer a:hover{
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  body{
+    background-size: cover;
+    background-image: url(https://media.istockphoto.com/id/1287456867/vi/anh/b%E1%BA%A7u-tr%E1%BB%9Di-%C4%91%C3%AAm-trong-v%E1%BA%AFt-v%E1%BB%9Bi-d%E1%BA%A3i-ng%C3%A2n-h%C3%A0-v%C3%A0-s%E1%BB%91-l%C6%B0%E1%BB%A3ng-ng%C3%B4i-sao-kh%E1%BB%95ng-l%E1%BB%93.jpg?s=612x612&w=0&k=20&c=3_aQJ3WjyaqSQFOfBrvaJjUeKTPZ-lySJmEmvWnnYcA=)
+  }
+</style>
+
+<body>
+<main class="signup-container" style="line-height: 30px">
+    <div class="signup-card" style="margin-left: 20px">
+      <div class="signup-header">
+        <h1>Join CosmicWorlds</h1>
+        <p>Get updates on new planetary science guides.</p>
+      </div>
+      <button type="button" class="btn-submit2" style="margin-bottom: 10px; cursor: pointer" onclick="window.location.href='index.html'">Back</button>
+
+      <form class="signup-form" action="#" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" style="margin-left: 10px; background-color: black; color: white; border: 2px solid rgba(255, 255, 255, 0.388); border-radius: 5px" placeholder="Enter your username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" style="margin-left: 10px; background-color: black; color: white; border: 2px solid rgba(255, 255, 255, 0.388); border-radius: 5px" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" style="margin-left: 10px; background-color: black; color: white; border: 2px solid rgba(255, 255, 255, 0.388); border-radius: 5px"placeholder="Create a password" required>
+        </div>
+          <button type="button" class="btn-submit" style="margin-top: 20px; cursor: pointer" onclick="window.location.href='index.html'">Enter Your Account</button> <!--Đành dùng một tí Javascript, nhưng rất đơn giản hoạt động như HREF mà target 'blank'-->
+
+      <div class="signup-footer">
+        <p>Don't have an account? <a href="index2.html">Register</a></p>
+      </div>
+    </div>
+  </main>
+</body>

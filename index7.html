@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+
+            background: rgba(0, 0, 0, 1) url("https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/ESO_306-17.jpg/960px-ESO_306-17.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail") no-repeat;
+            background-size: cover;
+            margin: auto auto
+        }
+
+        .container {
+            display: flex;
+            box-shadow: 0 10px 30px rgba(212, 205, 192, 0.4);
+            background-color: black;
+            color: white;
+            font-family: roboto;
+            margin-left: 50px;
+            text-align: center;
+            width: 500px;
+            height: 480px;
+            justify-content: left;
+            transition: transform 0.6s ease;
+            transition: transform 0.6s ease
+        }
+
+        .myImage {
+            width: 500px;
+            height: 500px;
+            padding: auto
+        }
+
+        .container:hover {
+            transform: translateY(-4px);
+            transform: scale(0.97)
+        }
+
+        .nav-links li {
+            padding-right: 35px;
+            padding-top: 3px
+        }
+
+        .happened strong {
+            color: rgba(255, 255, 255, 0.7)
+        }
+
+        .myImage {
+            box-sizing: cover
+        }
+
+        .buttonn {
+            width: 100px;
+            height: 50px;
+            background: linear-gradient(black, rgba(0, 0, 0, 0.533));
+            border: solid 3px rgba(255, 255, 255, 0.56);
+            border-radius: 5px;
+            color: white;
+            font-size: 30px;
+            transition: border 0.4s ease, color 0.4s ease, transform 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            margin-left: 65vw;
+            margin-top: 40px;
+        }
+
+        .buttonn:hover {
+            border: solid 3px rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.7);
+            transform: scale(0.97);
+
+        }
+
+        .containeric p b {
+            color: rgba(255, 255, 255, 0.823);
+            font-weight: bold;
+        }
+
+        .back {
+            cursor: pointer;
+            height: 50px;
+            width: 100px;
+            margin-left: 90vw;
+            margin-top: 2vw;
+            font-size: 20px;
+            font-family: roboto;
+            color: white;
+            background-color: black;
+            border: solid 2px rgba(255, 255, 255, 0.43);
+            box-shadow: 0 0px 20px rgba(212, 205, 192, 0.4);
+            border-radius: 3px;
+            transition: transform 0.4s ease, color 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .back:hover {
+            color: rgba(255, 255, 255, 0.7);
+            transform: scale(1.05)
+        }
+    </style>
+    <button id="back" class="back" onclick="window.location.href='index.html'">Back</button>
+    <div class="container" style="margin-top: 14vh; border-radius: 10px; text-decoration: none;">
+        <ul class="nav-links" style="list-style:none">
+            <li style="font-size: 50px">Brown Drawf
+            <li>
+
+            <li>
+                <div class="content">
+                    <h2><strong>How are they formed?</strong></h2>
+                </div>
+            </li>
+            <ul class="happened"
+                style="line-height: 30px; color: rgba(255, 255, 255, 0.601); padding-right: 35px; text-align: left">
+                <li><strong>Stage 1: Collapse</strong> - A cloud of gas and dust clumps together under gravity,
+                    shrinking + heating up.</li>
+                <li><strong>Stage 2: Fusion?</strong> - The dense core's hot enough to fuse deuterium, glowing dimly.
+                </li>
+                <li><strong>Stage 3: Failure!</strong> - Lacks the mass to fuse normal hydrogen: Nuclear fusion fails :[
+                </li>
+                <li><strong>Stage 4: Cooling Down.</strong> - Lacking internal heat, they cool and fade.</li>
+            </ul>
+    </div>
+    <div class="containeric" style="margin: auto; margin-top: 50px"
+        style=" border-radius: 10px; box-shadow: 0 0px 30px rgba(212, 205, 192, 0.4)">
+        <img id="image" src="image1.jpg" alt="Random ahhh image" class="myImage" style="margin-left: 65vw">
+        <button onclick="switchImage()" class="buttonn">▶</button>
+        <p id="number" style="color: white; font-size: 20px; font-family: roboto; margin-left: 65vw"></p>
+    </div>
+
+    <script>
+        const images = ["https://file.garden/aHjNczkSwExyMvq4/planetery%20formation%20(1)%20(1).png", "https://file.garden/aHjNczkSwExyMvq4/original.png", "https://file.garden/aHjNczkSwExyMvq4/fffff%20(1).png", "https://file.garden/aHjNczkSwExyMvq4/blablablalal.png"];
+        let index = 0;
+        document.getElementById("image").src = images[index];
+        document.getElementById("number").innerHTML = `Current Image:  <b>${index + 1}</b>`
+
+        function switchImage() {
+            index += 1
+            index = index % (images.length);
+            document.getElementById("image").src = images[index];
+            document.getElementById("number").innerHTML = `Current Image:  <b>${index + 1}</b>`
+
+            //Giúp index biến thành string mà hiện lên
+            //Ngoài ra để hoạt động thì dùng string `(string blablablala)`
+
+        }
+    </script>
+</body>
+
+</html>

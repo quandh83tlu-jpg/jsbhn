@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, initial-scale=1.0, user-scalable=yes">
+  <title>What Are Planets Made Of?</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 60px;
+    }
+
+    body {
+      font-family: sans-serif;
+      padding-top: 60px;
+      background-color: #0b0d17;
+      color: #e2e8f0;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #fbf9fa2c;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .navbar .logo {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      overflow-x: auto; /*Thêm cuộn ngăng ựa ựa ựa*/
+    }
+
+    .nav-links li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.3s ease;
+      white-space: nowrap; /*cấm xuống dòng >:[*/
+    }
+
+    .nav-links li a:hover {
+      color: rgba(255, 255, 255, 0.786);
+      border-radius: 4px;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .hero-title {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      color: #94a3b8;
+    }
+
+    .content-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .info-card {
+      background-color: #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease /*Làm điều (a)*/
+    }
+
+    .info-card:hover {
+      transform: translateY(-4);/*Định nghĩa điều (a) là đi lên mượt bơ blablablaalablablabl*/
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-media {
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      background-color: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0px 60px rgba(255, 255, 255, 0.2);
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+      border-radius: 20px;
+    }
+
+    .info-card:hover .card-media img {
+      transform: scale(1.06);
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 23px;
+      margin-bottom: 12px;
+      color: #f8fafc;
+    }
+
+    .layer-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .layer-list li {
+      font-size: 15px;
+      line-height: 1.4;
+      color: #cbd5e1;
+    }
+
+    .layer-list strong {
+      color: #38bdf8;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .footer button{
+      display: inline-block;
+      text-align: center;
+      padding: 30px;
+      font-size: 20px;
+      line-height: 20px;
+      height: 50px;
+      background-color: rgb(0, 0, 0);
+      margin: 30px auto;
+      padding: 12px 30px; 
+      color: white;
+      border: 2px rgba(255, 255, 255, 0.223) solid;
+      border-radius: 10px;
+      transition: transform 0.25s ease, background-color 0.25s ease
+    }
+    .footer button:hover{
+        transform: scale(1.02);
+        background-color: rgb(19, 19, 19);
+    }
+    .layer-list a{
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.666);
+      transition: color 0.35s ease;
+    }
+    .layer-list a:hover{
+       color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">CosmicWorlds</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#terrestrial">Rocky Planets</a></li>
+        <li><a href="#gas-giants">Gas Giants</a></li>
+        <li><a href="#ice-giants">Ice Giants</a></li>
+        <li><a href="#brown-dwarfs">Brown Dwarfs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Ẩn đi khi scroll đảo (down)-->
+  <section class="hero-section">
+    <h1 class="hero-title">Inside Planets & Brown Dwarfs</h1>
+    <p class="hero-subtitle">A simple look at what different kinds of worlds are made of inside.</p>
+  </section>
+
+  <main class="content-container" style="flex-shrink: 0;">
+
+    <section id="terrestrial" class="category-section">
+      <article class="info-card">
+        <div class="card-media">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJaBQOCKToxlaDcglelXPHpwvb0PtB41JbKTEB4WhiCw&s=10" alt="Rocky Planet">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Rocky Planets (Earth, Mars)</h3>
+          <ul class="layer-list">
+            <li><strong>Crust:</strong> - Solid rock surface, - Very thin outer shell</li>
+            <li><strong>Mantle:</strong> - Thick layer of hot rock, - Slowly flows over time</li>
+            <li><strong>Outer Core:</strong> - Liquid metal (iron & nickel), - Creates the magnetic field</li>
+            <li><strong>Inner Core:</strong> - Solid metal ball, - Super hot and under high pressure</li>
+            <li><strong>Mass</strong> - 0.1 - 40 Earth Mass</li>
+            <li><a href="index4.html">Learn more</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="gas-giants" class="category-section">
+      <article class="info-card">
+        <div class="card-media">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2FhiQKNJ3O9CEndmBxN_1olB_vEthU2YNbIpxQq3NQ&s=10" alt="Gas Giant">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Gas Giants (Jupiter, Saturn)</h3>
+          <ul class="layer-list">
+            <li><strong>Atmosphere:</strong> - Mostly hydrogen and helium gas, - Colorful cloud bands and storms</li>
+            <li><strong>Upper Ocean:</strong> - Thick layer of liquid hydrogen, - Gets denser the deeper you go</li>
+            <li><strong>Deep Mantle:</strong> - Liquid metallic hydrogen, - Conducts electricity like metal [Magnetic Field]</li>
+            <li><strong>Core:</strong> - Dense mix of rock and ice, - Trapped under crushing weight</li>
+            <li><strong>Mass</strong> - 0.1 - 12 Jupiter Mass</li>
+            <li><a href="index5.html">Learn more</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="ice-giants" class="category-section">
+      <article class="info-card">
+        <div class="card-media">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXmcWqjxox8kFBApCoSK1c6U52TXikHxqXUEVDkwvvt_5NhmS3YTIuHjA&s=10" alt="Ice Giant">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ice Giants (Uranus, Neptune)</h3>
+          <ul class="layer-list">
+            <li><strong>Atmosphere:</strong> - Hydrogen, helium, and methane, - Methane makes them look blue</li>
+            <li><strong>Mantle:</strong> - Thick slush of hot "ices", - Made of water, ammonia, and methane</li>
+            <li><strong>Deep Layers:</strong> - Pressure can turn carbon into real diamonds, - Super hot liquid depths</li>
+            <li><strong>Core:</strong> - Small core of rock and iron, - About the size of Earth</li>
+            <li><strong>Mass</strong> - 10 - 30 Earth Mass</li>
+            <li><a href="index6.html">Learn more</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <section id="brown-dwarfs" class="category-section">
+      <article class="info-card">
+        <div class="card-media">
+          <img src="https://physicsworld.com/wp-content/uploads/2015/07/PW-2015-07-31-Commissariat-brown.jpg" alt="Brown dwarf">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Brown Dwarfs ("Failed Stars")</h3>
+          <ul class="layer-list">
+            <li><strong>Atmosphere:</strong> - Strange hot skies, - Clouds made of liquid iron or dust</li>
+            <li><strong>Main Body:</strong> - Giant ball of hot gas and plasma, - Churns heat from inside out</li>
+            <li><strong>Core Energy:</strong> - Ate a little heavy fuel early on, - Too light to shine like a star</li>
+            <li>too heavy to be called a gas giant</li>
+            <li><strong>Center:</strong> - Extreme packed matter, - Held up by quantum pressure</li>
+            <li><strong>Mass</strong> - 13 - 75 Jupiter Mass</li>
+            <li><a href="index7.html">Learn more</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    
+  </main>
+
+  <footer class="footer">
+    <p>Your average space guide</p>
+    <button type="button" class="btn-submit" style="margin-top: 20px; cursor: pointer" onclick="window.location.href='index3.html'">Log In</button>
+    <button type="button" class="btn-submit" style="margin-top: 20px; cursor: pointer" onclick="window.location.href='index2.html'">Register</button>
+  </footer>
+
+</body>
+</html>
